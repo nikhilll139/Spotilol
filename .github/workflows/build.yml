@@ -26,11 +26,6 @@ jobs:
         with:
           packages: 'platform-tools'
 
-      - name: Install required Android SDK packages
-        run: |
-          sdkmanager --install "platforms;android-37" "build-tools;37.0.0"
-          yes | sdkmanager --licenses >/dev/null || true
-
       - name: Make Gradle executable
         run: chmod +x ./gradlew
 
